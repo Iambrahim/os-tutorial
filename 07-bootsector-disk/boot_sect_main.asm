@@ -7,6 +7,7 @@
     ; the bios sets 'dl' for our boot disk number
     ; if you have trouble, use the '-fda' flag: 'qemu -fda file.bin'
     call disk_load
+    ;Need to delete jmp $ from boot_sect_disk.asm
 
     mov dx, [0x9000] ; retrieve the first loaded word, 0xdada
     call print_hex
